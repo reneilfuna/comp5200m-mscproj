@@ -1,0 +1,29 @@
+# Conda envs
+envs/*.yaml.lock
+**/conda-meta/
+
+# track via submodule or note
+clarity_repo/clarity/
+
+# Data and outputs, live in $SCRATCH
+*.flac
+*.wav
+*.tar.gz
+*.tar.xz
+data/
+outputs/
+
+# Logs
+logs/
+*.out
+*.err
+
+# Python
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
+
+# OS/editor
+.DS_Store
+*.swp
+
