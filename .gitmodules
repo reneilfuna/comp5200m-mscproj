@@ -1,0 +1,3 @@
+[submodule "clarity/clarity"]
+	path = clarity/clarity
+	url = git@github.com:claritychallenge/clarity.git
