@@ -3,7 +3,5 @@ dependencies:
   - python=3.10
   - pip
   - git
-  - pip: 
-      - numpy
-      - scipy
-      - pandas
+  - ffmpeg
+  - libsndfile
