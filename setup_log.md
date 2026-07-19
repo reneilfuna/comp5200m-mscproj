@@ -46,3 +46,5 @@ Logs:
 	+ metadata files use .eval.json suffix not .valid.json
 	+ audio located at audio/eval
 	+ all six path overrides required in every script
+10.Torchaudio mismatch fixed:
+	+ cu130 build persisted, error found at job runtime
