@@ -27,3 +27,22 @@ Logs:
 7. GPU env test on compute node. Aire GPU driver only supports up to CUDA 12.6,
    CUDA was built against 13.0 and thus unavailable on first test. 
    Fresh snapshot taken after fix. 
+8. HYDRA config keys confirmed:
+	Confirmed keys for scripts:
+	+ path.root -> must be overridden as there is no default.
+	+ path.exp_folder -> default = ./exp_${separator.causality}$, must override
+	  to $SCRATCH$
+	+ separator.causality -> default causal, override to noncausal for the 
+	  the project implementation.
+	+ enhance.py output path: 
+	  {path.exp_folder}/enhanced_signals/{scene_id}_{listener_id}_A{alpha}_remix.flac
+	+ evaluate.py output path: {path.exp_folder}/scores.csv
+	+ CSV column names confirmed from evaluate.py: 
+	  scene, song, listener, lyrics, hypothesis_left, hypothesis_right, 
+	  haaqi_left, haaqi_right, haaqi_avg, whisper_left, whisper_right, 
+	  whisper_be, alpha, score
+9. Dataset structure confirmed:
+	path.root = $SCRATCH/cadenza/data/cadenza_data/cad2/task1
+	+ metadata files use .eval.json suffix not .valid.json
+	+ audio located at audio/eval
+	+ all six path overrides required in every script
