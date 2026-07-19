@@ -7,3 +7,5 @@ dependencies:
   - git
   - ffmpeg
   - libsndfile
+  - pip:
+    - torch --index-url https://download.pytorch.org/whl/cu126

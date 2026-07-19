@@ -24,3 +24,6 @@ Logs:
 	=> env-snapshot-20260719.yaml 8.4K
    Two snapshots currently exits, initial env build and 19 July build, size 
    difference confirms recipe dependencies. 
+7. GPU env test on compute node. Aire GPU driver only supports up to CUDA 12.6,
+   CUDA was built against 13.0 and thus unavailable on first test. 
+   Fresh snapshot taken after fix. 
