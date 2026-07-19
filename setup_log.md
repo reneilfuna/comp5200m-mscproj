@@ -14,5 +14,13 @@ Logs:
 	"$SCRATCH/cadenza/logs",
 3. load miniforge (everytime, in every shell), via:
 	"module load miniforge"
-4. Create environment.yaml for project: 
-
+4. Created environment.yaml for project, and confirmed clarity, torch, whisper and
+   hydra are installed and importable. 
+5. Whisper base.en model cached: 
+	"python -c "import whisper; whisper.load_model'('base.en')"
+	=> ~/.cache/whisper/base.en.pt 139M
+6. Environment snapshot taken:
+	"conda env export > $SCRATCH/cadenza/logs/env-snapshot-$(date +%Y%m%d).yaml"
+	=> env-snapshot-20260719.yaml 8.4K
+   Two snapshots currently exits, initial env build and 19 July build, size 
+   difference confirms recipe dependencies. 
