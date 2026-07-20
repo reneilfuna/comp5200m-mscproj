@@ -1,0 +1,30 @@
+#!/bin/bash
+#SBATCH --job-name=cad2_en_base_c
+#SBATCH --output=/mnt/scratch/sc21rf/cadenza/logs/enhance_base_c_%j.out
+#SBATCH --error=/mnt/scratch/sc21rf/cadenza/logs/enhance_base_c_%j.err
+#SBATCH --time=12:00:00
+#SBATCH --partition=gpu
+#SBATCH --gres=gpu:1
+#SBATCH --cpus-per-task=4
+#SBATCH --mem-per-cpu=8G
+
+module load miniforge
+module load cuda
+source "$(conda info --base)/etc/profile.d/conda.sh"
+conda activate cadenza
+
+set -euo pipefail
+
+DATA_ROOT="$SCRATCH/cadenza/train_data/cad2/task1"
+EXP_DIR="$SCRATCH/cadenza/outputs/baseline_causal"
+
+mkdir -p "$EXP_DIR"
+
+cd $HOME/cadenza/clarity/clarity/recipes/cad2/task1/baseline
+
+python enhance.py \
+    path.root="$DATA_ROOT" \
+    path.exp_folder="$EXP_DIR" \
+    separator.causality=causal
+
+echo "Enhance non-causal complete"
