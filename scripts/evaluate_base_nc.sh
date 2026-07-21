@@ -2,7 +2,7 @@
 #SBATCH --job-name=cad2_eval_base_nc
 #SBATCH --output=/mnt/scratch/sc21rf/cadenza/logs/evaluate_base_nc_%j.out
 #SBATCH --error=/mnt/scratch/sc21rf/cadenza/logs/evaluate_base_nc_%j.err
-#SBATCH --time=01:00:00
+#SBATCH --time=07:00:00
 #SBATCH --partition=gpu
 #SBATCH --gres=gpu:1
 #SBATCH --cpus-per-task=8
