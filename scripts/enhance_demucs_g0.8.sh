@@ -1,4 +1,3 @@
-
 #!/bin/bash
 #SBATCH --job-name=demucs_enhance_g0.8
 #SBATCH --output=/mnt/scratch/sc21rf/cadenza/logs/demucs_enhance_g0.8_%j.out
