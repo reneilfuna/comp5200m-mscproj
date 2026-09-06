@@ -27,3 +27,14 @@ __pycache__/
 .DS_Store
 *.swp
 
+denoiser_train/egs/
+denoiser_train/outputs/
+denoiser_train/*.th
+denoiser_train/egs/
+denoiser_train/outputs/
+denoiser_train/*.th
+denoiser_train/egs/
+denoiser_train/outputs/
+denoiser_train/__pycache__/
+denoiser_train/denoiser/__pycache__/
+denoiser_train/*.th

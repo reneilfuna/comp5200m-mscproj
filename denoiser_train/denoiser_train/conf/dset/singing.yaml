@@ -1,0 +1,9 @@
+# @package _group_
+dset:
+  train: /users/sc21rf/denoiser_train/egs/singing/tr
+  valid: /users/sc21rf/denoiser_train/egs/singing/cv
+  test: /users/sc21rf/denoiser_train/egs/singing/tt
+  noisy_json: /users/sc21rf/denoiser_train/egs/singing/tr/noisy.json
+  noisy_dir:
+  matching: sort
+eval_every: 5
